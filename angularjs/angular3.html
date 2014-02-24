@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="">
+  <head>
+    <title>Angular</title>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.4/angular.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  </head>
+
+  <body>
+  <h2>Angular3: List with SimpleController</h2>
+
+  <div data-ng-controller="SimpleController">
+    Name:<br />
+    <input type="text" data-ng-model="name" />
+
+    <h3>Looping with ng-repeat</h3>
+    <ul>
+	  <li data-ng-repeat="person in persons | filter:name | orderBy:city">[{{$index + 1}}] {{ person.name | uppercase }} - {{ person.city }}</li>
+    </ul>
+  </div>
+
+  <script>
+	 function SimpleController($scope) {
+		 $scope.persons=[
+		 	{name:'Dave',city:'Dublin'},
+			{name:'Bob',city:'Dublin'}, 
+			{name:'Julie',city:'Vevey'}
+		];
+	}
+  </script>
+
+</body>
+</html>
+

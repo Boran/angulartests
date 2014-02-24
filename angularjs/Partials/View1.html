@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Angular5, View 1</h2>
+    Name:
+    <br />
+    <input type="text" data-ng-model="filter.name" />
+    <br />
+    <ul>
+          <li data-ng-repeat="person in persons | filter:filter.name | orderBy:city">[{{$index + 1}}] {{ person.name | uppercase }} - {{ person.city }}</li>
+    </ul>
+    <br />
+    Customer name:<br />
+    <input type="text" data-ng-model="newPerson.name" />
+    <br />
+    Customer city:<br />
+    <input type="text" data-ng-model="newPerson.city" />
+    <br />
+    <button data-ng-click="addCustomer()">Add Customer</button>
+    <br />
+    <a href="#/view2">View 2 </a>
+</div>

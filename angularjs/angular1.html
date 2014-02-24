@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="">
+  <head>
+    <title>Angular1</title>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.4/angular.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  </head>
+
+<body data-ng-init="names=['Dave','Bob','Julie']">
+  <h2>Angular1</h2>
+
+  <label for="email">Name</label>
+  <input type="text" name="name" data-ng-model="name" > {{ name }}
+
+  <h3>Looping with ng-repeat</h3>
+  <ul>
+    <li data-ng-repeat="person in names">[{{$index + 1}}] {{ person | uppercase }}</li>
+  </ul>
+
+
+</body>
+</html>
