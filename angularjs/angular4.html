@@ -6,11 +6,12 @@
   </head>
 
   <body>
-  <h2>Angular4: </h2>
+  <h2>AngularJS 4: list filtering</h2>
 
   <div data-ng-controller="SimpleController">
     Name:<br />
-    <input type="text" data-ng-model="name" />
+    <input type="text" data-ng-model="name" 
+	  placeholder="Enter a name to filter"/> {{ name }}
 
     <h3>Looping with ng-repeat</h3>
     <ul>

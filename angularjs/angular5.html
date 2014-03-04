@@ -6,7 +6,7 @@
   </head>
 
   <body>
-  <h2>Angular5: </h2>
+  <h2>Angular5: SPA/Views/Partials </h2>
 
   <div>
 	  <!-- placeholder for views -->
@@ -27,7 +27,7 @@
 					controller: 'SimpleController',
 					templateUrl:'Partials/View2.html'
 				})
-				.otherwise({ redirectTo: '/view1'});
+			.otherwise({ redirectTo: '/view1'});
 	});
         demoApp.controller('SimpleController', function ($scope) {
                 $scope.persons=[
